@@ -119,6 +119,8 @@ require (
 	mvdan.cc/unparam v0.0.0-20221223090309-7455f1af531d
 )
 
+require github.com/herpiko/txrollbackcheck v0.0.0-20230330151534-3cee5e85d64a // indirect
+
 require (
 	github.com/Masterminds/semver v1.5.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect

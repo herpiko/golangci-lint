@@ -758,6 +758,12 @@ func (m Manager) GetAllSupportedLinterConfigs() []*linter.Config {
 			WithLoadForGoAnalysis().
 			WithURL("https://github.com/ryanrolds/sqlclosecheck"),
 
+		linter.NewConfig(golinters.NewTxRollbackCheck()).
+			WithSince("v1.28.0").
+			WithPresets(linter.PresetBugs, linter.PresetSQL).
+			WithLoadForGoAnalysis().
+			WithURL("https://github.com/herpiko/txrollbackcheck"),
+
 		linter.NewConfig(golinters.NewStaticcheck(staticcheckCfg)).
 			WithSince("v1.0.0").
 			WithLoadForGoAnalysis().
